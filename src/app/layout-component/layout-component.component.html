@@ -1,0 +1,66 @@
+<div class="wrapper">
+    <!-- Sidebar Holder -->
+    <nav id="sidebar">
+        <div id="dismiss">
+            <i class="fa fa-chevron-left fa-1x" aria-hidden="true"></i> </div>
+
+        <div class="sidebar-header">
+            <h3>WaCans</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Admin Information </p>
+            <li>
+                <a routerLink='/orderGrid' routerLinkActive="active" class="collapseSideBar"><i class="fa fa-th fa-1x" aria-hidden="true"></i> Order Grid </a>
+            </li>
+            <li>
+                <a routerLink='/adminPanel' routerLinkActive="active" class="collapseSideBar"><i class="fa fa-user fa-1x" aria-hidden="true"></i> Admin Grid </a>
+            </li>
+            <li>
+                <a routerLink='/sellerGrid' routerLinkActive="active" class="collapseSideBar"> $ Seller Grid </a>
+            </li>
+            <li>
+                <a routerLink='/itemDetailGrid' routerLinkActive="active" class="collapseSideBar"><i class="fa fa-info fa-1x" aria-hidden="true"></i> Item Detail </a>
+            </li>
+            <li>
+                <a routerLink='/itemAvailabiltyGrid' routerLinkActive="active" class="collapseSideBar"><i class="fa fa-at fa-1x" aria-hidden="true"></i> Item Availability </a>
+            </li>
+            <li>
+                <a routerLink='' routerLinkActive="active" class="collapseSideBar"><i class="fa fa-power-off fa-1x" aria-hidden="true"></i> Logout </a>
+            </li>
+
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="" class=""><i class="fa fa-user fa-1x" aria-hidden="true"></i> About Author</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content Holder -->
+    <div id="content">
+        <nav class="navbar navbar-default" id='stickyNavBar'>
+            <div class="flex spaceBetween">
+                <div class="navbar-header">
+                    <span id="sidebarCollapse" class="fa fa-list fa-2x white"></span>
+
+                </div>
+                <div>
+                    <h2 class="waterEffectLabel">WaCans</h2>
+                </div>
+
+                <div class="pull-right">
+                    <ul class="list-unstyled inline white">
+                        <li><a href="#"><i class="fa fa-power-off  headerFont" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+        <br/>
+        <router-outlet></router-outlet>
+
+
+    </div>
+</div>
+<div class="overlay"></div>
