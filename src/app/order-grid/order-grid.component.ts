@@ -21,8 +21,8 @@ export class OrderGridComponent implements OnInit {
     this.defaultColDef = { editable: true };
     this.rowClassRules = {
       "highlightRow": function(params) {
-        let selectedRow = params.data.newOrRefill;
-        return selectedRow == 'Refill';
+        let selectedRow = params.data.orderStatus;
+        return selectedRow == 'Supplier Queue';
       }
     };
    
