@@ -26,3 +26,7 @@ a:focus {
     text-decoration: none;
     transition: all 0.3s;
 }
+
+.ag-theme-balham .highlightRow {
+    background-color: sandybrown !important;
+}

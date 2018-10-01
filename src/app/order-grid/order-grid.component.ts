@@ -9,27 +9,26 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class OrderGridComponent implements OnInit {
   title = 'Wacans';
-  private defaultColDef;
+   defaultColDef;
   constructor(private http: HttpClient,private toastr: ToastrService) {
     this.http.get('http://techietet.com/bshopAdminPanel/adminPanel/apOrderDetail.php  ')
     .subscribe((result) =>{
       this.rowData = result
       if(result){
-        this.toastr.success('Order Grid Loaded SuccessFully', 'Success!');
+       // this.toastr.success('Order Grid Loaded SuccessFully', 'Success!');
      }
     });
     this.defaultColDef = { editable: true };
     this.rowClassRules = {
-      "sick-days-warning": function(params) {
-        let selectedRow = params.data.mobileNo;
-        return selectedRow == '9130055254';
+      "highlightRow": function(params) {
+        let selectedRow = params.data.newOrRefill;
+        return selectedRow == 'Refill';
       }
     };
-    console.log(this.rowClassRules);
-    
+   
   }
   rowData: any;
-  private rowClassRules;
+   rowClassRules;
   
   columnDefs = [
     { headerName: 'Order Id', field: 'orderId',width:90 ,checkboxSelection: true },

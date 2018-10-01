@@ -10,13 +10,13 @@ import { ToastrService } from 'ngx-toastr';
 export class SellerGridComponent implements OnInit {
 
   title = 'Wacans';
-  private defaultColDef;
+   defaultColDef;
   constructor(private http: HttpClient,private toastr: ToastrService) {
     this.http.get('http://techietet.com/bshopAdminPanel/adminPanel/apSellerDetail.php')
     .subscribe((result) =>{
       this.rowData = result
       if(result){
-        this.toastr.success('Seller Grid Loaded SuccessFully', 'Success!');
+       // this.toastr.success('Seller Grid Loaded SuccessFully', 'Success!');
      }
     });
     this.defaultColDef = { editable: true };
@@ -30,7 +30,7 @@ export class SellerGridComponent implements OnInit {
     
   }
   rowData: any;
-  private rowClassRules;
+   rowClassRules;
   
   columnDefs = [
     { headerName: 'Seller Id', field: 'sellerId', width:150,checkboxSelection: true },

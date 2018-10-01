@@ -10,13 +10,13 @@ import { HttpClient } from '@angular/common/http';
 export class ItemDetailComponent implements OnInit {
 
   title = 'Wacans';
-  private defaultColDef;
+   defaultColDef;
   constructor(private http: HttpClient,private toastr: ToastrService) {
     this.http.get('http://techietet.com/bshopAdminPanel/adminPanel/apItemDetail.php')
     .subscribe((result) =>{
       this.rowData = result
       if(result){
-        this.toastr.success('Item Detail Grid Loaded SuccessFully', 'Success!');
+        //this.toastr.success('Item Detail Grid Loaded SuccessFully', 'Success!');
      }
     });
     this.defaultColDef = { editable: true };
@@ -30,7 +30,7 @@ export class ItemDetailComponent implements OnInit {
     
   }
   rowData: any;
-  private rowClassRules;
+   rowClassRules;
   
   columnDefs = [
     { headerName: 'Item Id', field: 'itemId',width:150 ,checkboxSelection: true },

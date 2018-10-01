@@ -9,13 +9,13 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AdminPanelComponent implements OnInit {
   title = 'Wacans';
-  private defaultColDef;
+  public defaultColDef;
   constructor(private http: HttpClient, private toastr: ToastrService) {
     this.http.get('http://techietet.com/bshopAdminPanel/adminPanel/apCustomerDetail.php')
       .subscribe((result) =>{
         this.rowData = result
         if(result){
-          this.toastr.success('Admin Grid Loaded SuccessFully', 'Success!');
+          //this.toastr.success('Admin Grid Loaded SuccessFully', 'Success!');
        }
       });
 
@@ -30,7 +30,7 @@ export class AdminPanelComponent implements OnInit {
 
   }
   rowData: any;
-  private rowClassRules;
+  rowClassRules;
 
   columnDefs = [
     { headerName: 'Mobile Number', field: 'mobileNo', checkboxSelection: true },

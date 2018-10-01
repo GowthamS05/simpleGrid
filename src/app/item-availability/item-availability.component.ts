@@ -11,13 +11,13 @@ export class ItemAvailabilityComponent implements OnInit {
 
   
   title = 'Wacans';
-  private defaultColDef;
+   defaultColDef;
   constructor(private http: HttpClient,private toastr: ToastrService) {
     this.http.get('http://techietet.com/bshopAdminPanel/adminPanel/apItemAvailability.php')
     .subscribe((result) =>{
       this.rowData = result
       if(result){
-        this.toastr.success('Item Availability Grid Loaded SuccessFully', 'Success!');
+        //this.toastr.success('Item Availability Grid Loaded SuccessFully', 'Success!');
      }
     });
     this.defaultColDef = { editable: true };
@@ -31,7 +31,7 @@ export class ItemAvailabilityComponent implements OnInit {
     
   }
   rowData: any;
-  private rowClassRules;
+   rowClassRules;
   
   columnDefs = [
     { headerName: 'Can AV Id', field: 'canAvId',width:150 ,checkboxSelection: true },
