@@ -7,12 +7,20 @@ import { AgGridModule } from 'ag-grid-angular';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { WalletComponent } from './wallet/wallet.component';
+import { WalletTransComponent } from './wallet-trans/wallet-trans.component';
+import { LoginComponentComponent } from './login-component/login-component.component';
+import { EmptyandUnpaidComponent } from './emptyand-unpaid/emptyand-unpaid.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponentComponent,
     routingComponents,
+    WalletComponent,
+    WalletTransComponent,
+    LoginComponentComponent,
+    EmptyandUnpaidComponent,
 
   ],
   imports: [

@@ -39,6 +39,7 @@ export class OrderGridComponent implements OnInit {
     { headerName: 'Product Name', field: 'productName',width:100 },
     { headerName: 'Delivery Date', field: 'deliveryDate',width:100 },
     { headerName: 'Number of Items', field: 'noOfItems',width:100 },
+    { headerName: 'Promo Code', field: 'promoCode',width:100 },
     { headerName: 'Order Amount', field: 'orderAmount' ,width:100},
     { headerName: 'Order Status', field: 'orderStatus',width:100 },
     { headerName: 'Order Type', field: 'orderType',width:100 },

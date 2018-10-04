@@ -17,6 +17,9 @@ export class AdminPanelComponent implements OnInit {
         if(result){
           //this.toastr.success('Admin Grid Loaded SuccessFully', 'Success!');
        }
+      //  error => {
+      //   this.errors = error;
+      // },
       });
 
     this.defaultColDef = { editable: true };

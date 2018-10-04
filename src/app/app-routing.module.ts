@@ -1,3 +1,6 @@
+import { EmptyandUnpaidComponent } from './emptyand-unpaid/emptyand-unpaid.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { WalletTransComponent } from './wallet-trans/wallet-trans.component';
 import { ItemAvailabilityComponent } from './item-availability/item-availability.component';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { SellerGridComponent } from './seller-grid/seller-grid.component';
@@ -14,7 +17,9 @@ const routes: Routes = [
   { path:'sellerGrid',component: SellerGridComponent} ,
   { path:'itemDetailGrid',component: ItemDetailComponent} ,
   { path:'itemAvailabiltyGrid',component: ItemAvailabilityComponent} ,
-  
+  { path:'itemWalletComponent',component: WalletComponent} ,
+  { path:'itemWalletTransComponent',component: WalletTransComponent} ,
+  { path:'emptyUnpaid',component: EmptyandUnpaidComponent} ,  
   { path:'',component: DefaultComponentComponent}   
   
 ];
@@ -24,4 +29,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [AdminPanelComponent,DefaultComponentComponent,OrderGridComponent,ItemDetailComponent,ItemAvailabilityComponent,SellerGridComponent]
+export const routingComponents = [AdminPanelComponent,DefaultComponentComponent,
+  OrderGridComponent,ItemDetailComponent,ItemAvailabilityComponent,WalletTransComponent,
+  SellerGridComponent,WalletComponent,EmptyandUnpaidComponent]

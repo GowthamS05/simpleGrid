@@ -9,7 +9,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ItemAvailabilityComponent implements OnInit {
 
-  
+  gridApi;
+ 
   title = 'Wacans';
    defaultColDef;
   constructor(private http: HttpClient,private toastr: ToastrService) {
@@ -34,13 +35,16 @@ export class ItemAvailabilityComponent implements OnInit {
    rowClassRules;
   
   columnDefs = [
-    { headerName: 'Can AV Id', field: 'canAvId',width:150 ,checkboxSelection: true },
-    { headerName: 'Seller Id', field: 'canAvSellerId',width:150 },
-    { headerName: 'Can Id', field: 'canId',width:150 },
+    { headerName: 'Can AV Id', field: 'canAvId' ,checkboxSelection: true },
+    { headerName: 'Seller Id', field: 'canAvSellerId' },
+    { headerName: 'Can Id', field: 'canId' },
   ];
  
 
   ngOnInit() {
   }
-
+  onGridReady(params) {
+    this.gridApi = params.api;
+    this.gridApi.sizeColumnsToFit();
+ }
 }
