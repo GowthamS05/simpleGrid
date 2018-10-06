@@ -1,3 +1,4 @@
+import { LoginComponentComponent } from './login-component/login-component.component';
 import { EmptyandUnpaidComponent } from './emptyand-unpaid/emptyand-unpaid.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { WalletTransComponent } from './wallet-trans/wallet-trans.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path:'itemWalletComponent',component: WalletComponent} ,
   { path:'itemWalletTransComponent',component: WalletTransComponent} ,
   { path:'emptyUnpaid',component: EmptyandUnpaidComponent} ,  
+  { path:'login',component: LoginComponentComponent} ,  
   { path:'',component: DefaultComponentComponent}   
   
 ];
@@ -31,4 +33,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [AdminPanelComponent,DefaultComponentComponent,
   OrderGridComponent,ItemDetailComponent,ItemAvailabilityComponent,WalletTransComponent,
-  SellerGridComponent,WalletComponent,EmptyandUnpaidComponent]
+  SellerGridComponent,WalletComponent,EmptyandUnpaidComponent,LoginComponentComponent]
